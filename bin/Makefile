@@ -1,15 +1,15 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -g --std=c++23 -I../include -L../lib #All your compilation flags are stored here, making it easier to manage and extend.
+CXXFLAGS = -g --std=c++23 -I../include -I../header -L../lib
 
 # Libraries
-LIBS = -lglfw3dll -lopengl32 # Contains both -lglfw3dll for GLFW and -lopengl32 for OpenGL on Windows.
+LIBS = -lglfw3dll -lopengl32 # For GLFW and OpenGL on Windows.
 
 # Source files
-SRCS = ../src/main.cpp ../src/glad.c #Lists both main.cpp and glad.c, which are necessary for compiling your project.
+SRCS = $(wildcard ../src/*.cpp ../src/*.c) # Automatically includes all .cpp and .c files from src folder
 
 # Target executable
-TARGET = main #This target builds the main.exe.
+TARGET = main # This target builds the main.exe.
 
 # Build target
 all: $(TARGET)
