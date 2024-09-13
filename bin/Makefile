@@ -1,6 +1,6 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -g --std=c++23 -I../include -I../header -L../lib
+CXXFLAGS = -g --std=c++23 -I../include -I../header -L../lib -I../resources
 
 # Libraries
 LIBS = -lglfw3dll -lopengl32 # For GLFW and OpenGL on Windows.

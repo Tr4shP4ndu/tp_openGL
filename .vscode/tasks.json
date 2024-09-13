@@ -11,6 +11,8 @@
         "-ggdb",
         "E:/Programming/tp_openGL/include",
         "E:/Programming/tp_openGL/lib",
+        "E:/Programming/tp_openGL/header",
+        "E:/Programming/tp_openGL/resources",
         "-O2",
         "-DNDEBUG",
         "-pedantic-errors",

@@ -62,8 +62,8 @@ int main()
 
 
 
-	// Generates Shader object using shaders defualt.vert and default.frag
-	Shader shaderProgram("default.vert", "default.frag");
+	// Generates Shader object using shaders default.vert and default.frag
+	Shader shaderProgram("shaders/default.vert", "shaders/default.frag");
 
 
 
