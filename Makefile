@@ -12,14 +12,17 @@ SRCS = $(wildcard ./src/*.cpp ./src/*.c) # Automatically includes all .cpp and .
 OUT = bin/main # This OUT builds the main.exe.
 
 # Build OUT
-all: $(OUT)
+all: $(OUT) run
 
 $(OUT): out_resources
 	$(CXX) $(CXXFLAGS) $(SRCS) $(LIBS) -o $(OUT)
 
 out_resources:
-	Copy-Item -Path "resources" -Destination "bin" -Recurse
+	xcopy /E /I /Y resources bin\resources
 
 # Clean OUT
 clean:
 	del $(OUT).exe
+
+run:
+	 cd .\bin\ && .\main.exe
